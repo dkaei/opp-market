@@ -1,0 +1,36 @@
+@import url('https://fonts.cdnfonts.com/css/orkney');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*------------------------------------------------------*/
+* {
+    font-family: Geneva, Verdana, sans-serif;
+    font-family: 'Orkney', sans-serif !important;
+}
+
+body {
+    background-color: #F9F9F9;
+}
+
+.px-0-7 {
+    padding-left: 0.19rem;
+    padding-right: 0.19rem;
+}
+.py-0-7 {
+    padding-top: 0.19rem;
+    padding-bottom: 0.19rem;
+}
+
+.border-3 {
+    border-width: 2.5px;
+}
+
+.h-19 {
+    height: 4.8rem;
+}
+.h-31 {
+    height: 7.15rem;
+}
+

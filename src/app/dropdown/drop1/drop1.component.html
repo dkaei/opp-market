@@ -1,0 +1,45 @@
+<div class="relative block w-auto h-full content-center ml-3 cursor-pointer" (click)="onMouseClick()" (mouseover)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    <div id="{{dId}}">
+        <div class="inline float-left w-full md:w-1/5 m-0">
+            <div class="size-6 lg:size-8 aspect-square rounded-full bg-custom-black border border-gray-500 p-0.5 ml-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="stroke-gray-300 m-1">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>   
+            </div>
+        </div>
+        <div class="inline float-left w-1/3 md:w-1/2 ml-3">      
+            <p class="{{dHover}} font-normal text-xs lg:text-sm py-2 {{dSelected}}">
+                {{dTitle}}
+            </p>
+        </div>
+        <div class="inline float-right w-1/3 md:w-1/5 pl-5 py-3 border-r-2 border-gray-700">
+            <svg class="size-2" fill="#ffffff" height="64px" width="64px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 386.257 386.257" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon points="0,96.879 193.129,289.379 386.257,96.879 "></polygon> </g></svg>
+        </div>
+    </div>
+    <div class="absolute w-full inset-x-0 top-0 z-10 mt-24 lg:mt-20 origin-top divide-y divide-gray-500 rounded-md bg-custom-black bg-opacity-75 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none text-center {{showOptions}}" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+        <div class="py-1" role="none">
+            <a href="#" (click)="dTitle='AI Engineer'; dSelected='text-white'"               class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >AI Engineer</a>
+            <a href="#" (click)="dTitle='Business Analyst'; dSelected='text-white'"          class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Business Analyst</a>
+            <a href="#" (click)="dTitle='Cloud Engineer'; dSelected='text-white'"            class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Cloud Engineer</a>
+            <a href="#" (click)="dTitle='Cybersecurity Specialist'; dSelected='text-white'"  class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Cybersecurity Specialist</a>
+            <a href="#" (click)="dTitle='Data Engineer'; dSelected='text-white'"             class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Data Engineer</a>
+            <a href="#" (click)="dTitle='Data Scientist'; dSelected='text-white'"            class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Data Scientist</a>
+            <a href="#" (click)="dTitle='Database Administrator'; dSelected='text-white'"    class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Database Administrator</a>
+            <a href="#" (click)="dTitle='Designer'; dSelected='text-white'"                  class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Designer</a>
+            <a href="#" (click)="dTitle='DevOps Engineer'; dSelected='text-white'"           class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >DevOps Engineer</a>
+            <a href="#" (click)="dTitle='Game Developer'; dSelected='text-white'"            class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Game Developer</a>
+            <a href="#" (click)="dTitle='IT Project Manager'; dSelected='text-white'"        class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >IT Project Manager</a>
+            <a href="#" (click)="dTitle='IT Support Specialist'; dSelected='text-white'"     class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >IT Support Specialist</a>
+            <a href="#" (click)="dTitle='Machine Learning Engineer'; dSelected='text-white'" class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Machine Learning Engineer</a>
+            <a href="#" (click)="dTitle='Mobile Developer'; dSelected='text-white'"          class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Mobile Developer</a>
+            <a href="#" (click)="dTitle='Network Engineer'; dSelected='text-white'"          class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Network Engineer</a>
+            <a href="#" (click)="dTitle='QA Engineer'; dSelected='text-white'"               class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >QA Engineer</a>
+            <a href="#" (click)="dTitle='Software Engineer'; dSelected='text-white'"         class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Software Engineer</a>
+            <a href="#" (click)="dTitle='System Administrator'; dSelected='text-white'"      class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >System Administrator</a>
+            <a href="#" (click)="dTitle='Web Developer'; dSelected='text-white'"             class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Web Developer</a>
+        </div>
+        <div class="py-1" role="none">
+        <a href="#" (click)="dTitle='Profession'; dSelected=''" class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >De-select</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="relative block w-auto h-full content-center ml-3 cursor-pointer" (click)="onMouseClick()" (mouseover)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    <div id="{{dId}}">
+        <div class="inline float-left w-full md:w-1/5 m-0">
+            <div class="size-6 lg:size-8 aspect-square rounded-full bg-custom-black border border-gray-500 p-0.5 ml-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="stroke-gray-300 m-1">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                </svg> 
+            </div>
+        </div>
+        <div class="inline float-left w-1/3 md:w-1/2 ml-3">      
+            <p class="{{dHover}} font-normal text-xs lg:text-sm py-2 {{dSelected}}">
+                {{dTitle}}
+            </p>
+        </div>
+        <div class="inline float-right w-1/3 md:w-1/5 pl-5 py-3 border-r-2 border-gray-700">
+            <svg class="size-2" fill="#ffffff" height="64px" width="64px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 386.257 386.257" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon points="0,96.879 193.129,289.379 386.257,96.879 "></polygon> </g></svg>
+        </div>
+    </div>
+    <div class="absolute w-full inset-x-0 top-0 z-10 mt-24 lg:mt-20 origin-top divide-y divide-gray-500 rounded-md bg-custom-black bg-opacity-75 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none text-center {{showOptions}}" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+        <div class="py-1" role="none">
+            <a href="#" (click)="dTitle='Atlanta, GA'; dSelected='text-white'"       class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Atlanta, GA</a>
+            <a href="#" (click)="dTitle='Austin, TX'; dSelected='text-white'"        class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Austin, TX</a>
+            <a href="#" (click)="dTitle='Boston, MA'; dSelected='text-white'"        class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Boston, MA</a>
+            <a href="#" (click)="dTitle='Chicago, IL'; dSelected='text-white'"       class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Chicago, IL</a>
+            <a href="#" (click)="dTitle='Denver, CO'; dSelected='text-white'"        class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Denver, CO</a>
+            <a href="#" (click)="dTitle='Los Angeles, CA'; dSelected='text-white'"   class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Los Angeles, CA</a>
+            <a href="#" (click)="dTitle='Miami, FL'; dSelected='text-white'"         class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Miami, FL</a>
+            <a href="#" (click)="dTitle='New York, NY'; dSelected='text-white'"      class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >New York, NY</a>
+            <a href="#" (click)="dTitle='San Francisco, CA'; dSelected='text-white'" class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >San Francisco, CA</a>
+            <a href="#" (click)="dTitle='Seattle, WA'; dSelected='text-white'"       class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Seattle, WA</a>        </div>
+        <div class="py-1" role="none">
+        <a href="#" (click)="dTitle='Work location'; dSelected=''" class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >De-select</a>
+        </div>
+    </div>
+</div>

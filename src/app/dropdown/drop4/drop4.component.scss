@@ -1,0 +1,8 @@
+mat-slider {
+    width: 90%;
+    margin-right: 5%;
+}
+
+::ng-deep .mat-slider-thumb {
+    transform: scale(0.5) !important;
+  }

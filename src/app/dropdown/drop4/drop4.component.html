@@ -1,0 +1,35 @@
+
+<div class="relative block w-auto h-full content-center ml-3 cursor-pointer {{drop4p1}}" (click)="onMouseClick()" (mouseover)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    <div id="{{dId}}">
+        <div class="inline float-left w-full md:w-1/5 m-0">
+            <div class="size-6 lg:size-8 aspect-square rounded-full bg-custom-black border border-gray-500 p-0.5 ml-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="stroke-gray-300 m-1">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                </svg>                  
+            </div>
+        </div>
+        <div class="inline float-left w-1/3 md:w-1/2 ml-3">      
+            <p class="font-normal text-xs lg:text-sm py-2 text-white">
+                {{dTitle}}
+            </p>
+        </div>
+        <div class="inline float-right w-1/3 md:w-1/5 pl-5 py-3 border-r-2 border-gray-700">
+            <svg class="size-2" fill="#ffffff" height="64px" width="64px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 386.257 386.257" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon points="0,96.879 193.129,289.379 386.257,96.879 "></polygon> </g></svg>
+        </div>
+    </div>
+    <div class="absolute w-full inset-x-0 top-0 z-10 mt-24 lg:mt-20 origin-top divide-y divide-gray-500 rounded-md bg-custom-black bg-opacity-75 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none text-center {{showOptions}}" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+        <div class="py-1" role="none">
+            <a href="#" (click)="dTitle='Per month'" class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Per month</a>
+            <a href="#" (click)="dTitle='Per year'" class="block px-4 py-2 text-sm hover:text-base text-gray-100 hover:text-white" role="menuitem" tabindex="-1" >Per year</a>
+        </div>
+    </div>
+</div>
+
+<div class="block w-auto h-full content-center mx-6 {{drop4p2}}">
+    <div class="inline float-left"><p class="text-sm text-white">Salary range</p></div>
+    <div class="inline float-right pr-4"><p class="text-sm text-white">$1,200 - $20,000</p></div>
+    <mat-slider min="0" max="30000">
+        <input value="1200" matSliderStartThumb>
+        <input value="20000" matSliderEndThumb>
+    </mat-slider>
+</div>
